@@ -1,0 +1,148 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Jul 29 20:05:57 2020
+# Process ID: 9496
+# Current directory: E:/aaagongcheng/Camera_Demo
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8108 E:\aaagongcheng\Camera_Demo\Camera_Demo.xpr
+# Log file: E:/aaagongcheng/Camera_Demo/vivado.log
+# Journal file: E:/aaagongcheng/Camera_Demo\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/aaagongcheng/Camera_Demo/Camera_Demo.xpr
+INFO: [Project 1-313] Project file moved from 'D:/vivado/PLD/Camera_Demo' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] IP Repository Path: Could not find the directory 'E:/../PLD/shuqi/SEA/Examples/FPGA-IP/Frequency-Divider-IP', nor could it be found using path 'D:/PLD/shuqi/SEA/Examples/FPGA-IP/Frequency-Divider-IP'.
+WARNING: [filemgmt 56-2] IP Repository Path: Could not find the directory 'E:/../PLD/shuqi/SEA/Examples/FPGA-IP/LED-IP', nor could it be found using path 'D:/PLD/shuqi/SEA/Examples/FPGA-IP/LED-IP'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/aaagongcheng/Camera_Demo/IP_Core'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'e:PLD/shuqi/SEA/Examples/FPGA-IP/Frequency-Divider-IP'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'e:PLD/shuqi/SEA/Examples/FPGA-IP/LED-IP'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/vivado/Vivado/2018.3/data/ip'.
+WARNING: [IP_Flow 19-2162] IP 'clk_wiz_0' is locked:
+* IP definition 'Clocking Wizard (6.0)' for IP 'clk_wiz_0' (customized with software release 2018.2) has a different revision in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [IP_Flow 19-2162] IP 'clk_wiz_1' is locked:
+* IP definition 'Clocking Wizard (6.0)' for IP 'clk_wiz_1' (customized with software release 2018.2) has a different revision in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [IP_Flow 19-2162] IP 'RAM_Line' is locked:
+* IP definition 'Block Memory Generator (8.4)' for IP 'RAM_Line' (customized with software release 2018.2) has a different revision in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [IP_Flow 19-2162] IP 'AXIS_Data_RAM' is locked:
+* IP definition 'Block Memory Generator (8.4)' for IP 'AXIS_Data_RAM' (customized with software release 2018.2) has a different revision in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [IP_Flow 19-2162] IP 'Clk_Division_0' is locked:
+* IP definition 'Clk_Division (1.0)' for IP 'Clk_Division_0' (customized with software release 2018.2) was not found in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [IP_Flow 19-2162] IP 'RGB_LED_Task_0' is locked:
+* IP definition 'RGB_LED_Task (1.0)' for IP 'RGB_LED_Task_0' (customized with software release 2018.2) was not found in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+INFO: [Project 1-230] Project 'Camera_Demo.xpr' upgraded for this version of Vivado.
+open_project: Time (s): cpu = 00:00:24 ; elapsed = 00:00:15 . Memory (MB): peak = 774.117 ; gain = 172.410
+update_compile_order -fileset sources_1
+set_property  ip_repo_paths  {e:/aaagongcheng/Camera_Demo/IP_Core e:PLD/shuqi/SEA/Examples/FPGA-IP/Frequency-Divider-IP e:PLD/shuqi/SEA/Examples/FPGA-IP/LED-IP {E:/Users ip}} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/aaagongcheng/Camera_Demo/IP_Core'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'e:/aaagongcheng/Camera_Demo/PLD/shuqi/SEA/Examples/FPGA-IP/Frequency-Divider-IP'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'e:/aaagongcheng/Camera_Demo/PLD/shuqi/SEA/Examples/FPGA-IP/LED-IP'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/Users ip'.
+CRITICAL WARNING: [IP_Flow 19-1663] Duplicate IP found for 'trenz.biz:user:csi_to_axis:1.0'. The one found in IP location 'e:/aaagongcheng/Camera_Demo/IP_Core/CSI2AXIS_1.0_IP' will take precedence over the same IP in location e:/Users ip/CSI2AXIS_1.0_IP
+CRITICAL WARNING: [IP_Flow 19-1663] Duplicate IP found for 'trenz.biz:user:csi2_d_phy_rx:1.0'. The one found in IP location 'e:/aaagongcheng/Camera_Demo/IP_Core/CSI2DPHY_RX_1.0_IP' will take precedence over the same IP in location e:/Users ip/CSI2DPHY_RX_1.0_IP
+CRITICAL WARNING: [IP_Flow 19-1663] Duplicate IP found for 'digilentinc.com:ip:rgb2dvi:1.2'. The one found in IP location 'e:/aaagongcheng/Camera_Demo/IP_Core/RGB2DVI_IP' will take precedence over the same IP in location e:/Users ip/RGB2DVI_IP
+report_ip_status -name ip_status 
+upgrade_ip -srcset AXIS_Data_RAM [get_ips  {AXIS_Data_RAM RAM_Line clk_wiz_0 clk_wiz_1}] -log ip_upgrade.log
+Upgrading 'AXIS_Data_RAM'
+INFO: [Project 1-386] Moving file 'E:/aaagongcheng/Camera_Demo/Camera_Demo.srcs/sources_1/ip/AXIS_Data_RAM/AXIS_Data_RAM.xci' from fileset 'AXIS_Data_RAM' to fileset 'sources_1'.
+INFO: [Device 21-403] Loading part xc7s15ftgb196-1
+INFO: [IP_Flow 19-3422] Upgraded AXIS_Data_RAM (Block Memory Generator 8.4) from revision 1 to revision 2
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'AXIS_Data_RAM'...
+Upgrading 'RAM_Line'
+INFO: [Project 1-386] Moving file 'E:/aaagongcheng/Camera_Demo/Camera_Demo.srcs/sources_1/ip/RAM_Line/RAM_Line.xci' from fileset 'RAM_Line' to fileset 'sources_1'.
+INFO: [IP_Flow 19-3422] Upgraded RAM_Line (Block Memory Generator 8.4) from revision 1 to revision 2
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'RAM_Line'...
+Upgrading 'clk_wiz_0'
+INFO: [Project 1-386] Moving file 'E:/aaagongcheng/Camera_Demo/Camera_Demo.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci' from fileset 'clk_wiz_0' to fileset 'sources_1'.
+INFO: [IP_Flow 19-3422] Upgraded clk_wiz_0 (Clocking Wizard 6.0) from revision 1 to revision 2
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_0'...
+Upgrading 'clk_wiz_1'
+INFO: [Project 1-386] Moving file 'E:/aaagongcheng/Camera_Demo/Camera_Demo.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci' from fileset 'clk_wiz_1' to fileset 'sources_1'.
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'CLKOUT2_REQUESTED_OUT_FREQ' from '100.000' to '400.000' has been ignored for IP 'clk_wiz_1'
+INFO: [IP_Flow 19-3422] Upgraded clk_wiz_1 (Clocking Wizard 6.0) from revision 1 to revision 2
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_1'...
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'clk_wiz_1' has identified issues that may require user intervention. Please review the upgrade log 'e:/aaagongcheng/Camera_Demo/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'E:/aaagongcheng/Camera_Demo/ip_upgrade.log'.
+upgrade_ip: Time (s): cpu = 00:00:24 ; elapsed = 00:00:18 . Memory (MB): peak = 1318.879 ; gain = 0.000
+export_ip_user_files -of_objects [get_ips {AXIS_Data_RAM RAM_Line clk_wiz_0 clk_wiz_1}] -no_script -sync -force -quiet
+update_compile_order -fileset sources_1
+reset_run csi_to_axis_0_synth_1
+reset_run RGB_LED_Task_0_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'RAM_Line'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'AXIS_Data_RAM'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_wiz_1'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_wiz_1'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'csi_to_axis_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'RGB_LED_Task_0'...
+[Wed Jul 29 20:09:39 2020] Launched csi_to_axis_0_synth_1, RGB_LED_Task_0_synth_1, clk_wiz_1_synth_1, AXIS_Data_RAM_synth_1, RAM_Line_synth_1, clk_wiz_0_synth_1...
+Run output will be captured here:
+csi_to_axis_0_synth_1: E:/aaagongcheng/Camera_Demo/Camera_Demo.runs/csi_to_axis_0_synth_1/runme.log
+RGB_LED_Task_0_synth_1: E:/aaagongcheng/Camera_Demo/Camera_Demo.runs/RGB_LED_Task_0_synth_1/runme.log
+clk_wiz_1_synth_1: E:/aaagongcheng/Camera_Demo/Camera_Demo.runs/clk_wiz_1_synth_1/runme.log
+AXIS_Data_RAM_synth_1: E:/aaagongcheng/Camera_Demo/Camera_Demo.runs/AXIS_Data_RAM_synth_1/runme.log
+RAM_Line_synth_1: E:/aaagongcheng/Camera_Demo/Camera_Demo.runs/RAM_Line_synth_1/runme.log
+clk_wiz_0_synth_1: E:/aaagongcheng/Camera_Demo/Camera_Demo.runs/clk_wiz_0_synth_1/runme.log
+[Wed Jul 29 20:09:40 2020] Launched synth_1...
+Run output will be captured here: E:/aaagongcheng/Camera_Demo/Camera_Demo.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1318.879 ; gain = 0.000
+launch_runs impl_1 -jobs 2
+[Wed Jul 29 20:15:08 2020] Launched impl_1...
+Run output will be captured here: E:/aaagongcheng/Camera_Demo/Camera_Demo.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Wed Jul 29 20:17:01 2020] Launched impl_1...
+Run output will be captured here: E:/aaagongcheng/Camera_Demo/Camera_Demo.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210512180081
+open_hw_target: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2145.383 ; gain = 826.504
+set_property PROGRAM.FILE {E:/aaagongcheng/Camera_Demo/Camera_Demo.runs/impl_1/Camera_Demo.bit} [get_hw_devices xc7s15_0]
+current_hw_device [get_hw_devices xc7s15_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7s15_0] 0]
+INFO: [Labtools 27-1435] Device xc7s15 (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7s15_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s15_0]
+set_property PROGRAM.FILE {E:/aaagongcheng/Camera_Demo/Camera_Demo.runs/impl_1/Camera_Demo.bit} [get_hw_devices xc7s15_0]
+program_hw_devices [get_hw_devices xc7s15_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7s15_0] 0]
+INFO: [Labtools 27-1434] Device xc7s15 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7s15_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s15_0]
+set_property PROGRAM.FILE {E:/aaagongcheng/Camera_Demo/Camera_Demo.runs/impl_1/Camera_Demo.bit} [get_hw_devices xc7s15_0]
+program_hw_devices [get_hw_devices xc7s15_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7s15_0] 0]
+INFO: [Labtools 27-1434] Device xc7s15 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210512180081
+close_hw
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jul 29 22:11:23 2020...

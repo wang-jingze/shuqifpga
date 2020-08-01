@@ -1,0 +1,75 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sat Aug  1 10:21:50 2020
+| Host         : DESKTOP-1U76CUD running 64-bit major release  (build 9200)
+| Command      : report_drc -file color_drc_routed.rpt -pb color_drc_routed.pb -rpx color_drc_routed.rpx
+| Design       : color
+| Device       : xc7s15ftgb196-1
+| Speed File   : -1
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 7
++-------------+----------+-------------------------------------------------------------+------------+
+| Rule        | Severity | Description                                                 | Violations |
++-------------+----------+-------------------------------------------------------------+------------+
+| BUFC-1      | Warning  | Input Buffer Connections                                    | 1          |
+| DPIP-1      | Warning  | Input pipelining                                            | 4          |
+| PDRC-153    | Warning  | Gated clock check                                           | 1          |
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 1          |
++-------------+----------+-------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+BUFC-1#1 Warning
+Input Buffer Connections  
+Input buffer Camera_IIC_SDA_IOBUF/IBUF (in Camera_IIC_SDA_IOBUF macro) has no loads. It is recommended to have an input buffer drive an internal load.
+Related violations: <none>
+
+DPIP-1#1 Warning
+Input pipelining  
+DSP RGB_To_HSV0/HSV_Dividend_H0 input RGB_To_HSV0/HSV_Dividend_H0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#2 Warning
+Input pipelining  
+DSP RGB_To_HSV0/HSV_Dividend_S0 input RGB_To_HSV0/HSV_Dividend_S0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#3 Warning
+Input pipelining  
+DSP Rgb0/RGB_LED_Task0/inst/Clk_Divide_2_reg input Rgb0/RGB_LED_Task0/inst/Clk_Divide_2_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#4 Warning
+Input pipelining  
+DSP Rgb0/RGB_LED_Task0/inst/Clk_Division1/Count1 input Rgb0/RGB_LED_Task0/inst/Clk_Division1/Count1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+PDRC-153#1 Warning
+Gated clock check  
+Net Rgb0/RGB_LED_Task0/inst/Clk_Division1/Clk_2 is a gated clock net sourced by a combinational pin Rgb0/RGB_LED_Task0/inst/Clk_Division1/Light_Ok_i_2/O, cell Rgb0/RGB_LED_Task0/inst/Clk_Division1/Light_Ok_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT Rgb0/RGB_LED_Task0/inst/Clk_Division1/Light_Ok_i_2 is driving clock pin of 21 cells. This could lead to large hold time violations. Involved cells are:
+Rgb0/RGB_LED_Task0/inst/Cnt_2_reg[0], Rgb0/RGB_LED_Task0/inst/Cnt_2_reg[1], Rgb0/RGB_LED_Task0/inst/Cnt_2_reg[2], Rgb0/RGB_LED_Task0/inst/Cnt_2_reg[3], Rgb0/RGB_LED_Task0/inst/Cnt_2_reg[4], Rgb0/RGB_LED_Task0/inst/Cnt_2_reg[5], Rgb0/RGB_LED_Task0/inst/Cnt_2_reg[6], Rgb0/RGB_LED_Task0/inst/Cnt_2_reg[7], Rgb0/RGB_LED_Task0/inst/Cnt_2_reg[8], Rgb0/RGB_LED_Task0/inst/Cnt_3_reg[0], Rgb0/RGB_LED_Task0/inst/Cnt_3_reg[10], Rgb0/RGB_LED_Task0/inst/Cnt_3_reg[1], Rgb0/RGB_LED_Task0/inst/Cnt_3_reg[2], Rgb0/RGB_LED_Task0/inst/Cnt_3_reg[3], Rgb0/RGB_LED_Task0/inst/Cnt_3_reg[4] (the first 15 of 21 listed)
+Related violations: <none>
+
+

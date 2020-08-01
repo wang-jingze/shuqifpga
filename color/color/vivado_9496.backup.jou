@@ -1,0 +1,46 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Jul 29 20:05:57 2020
+# Process ID: 9496
+# Current directory: E:/aaagongcheng/Camera_Demo
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8108 E:\aaagongcheng\Camera_Demo\Camera_Demo.xpr
+# Log file: E:/aaagongcheng/Camera_Demo/vivado.log
+# Journal file: E:/aaagongcheng/Camera_Demo\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/aaagongcheng/Camera_Demo/Camera_Demo.xpr
+update_compile_order -fileset sources_1
+set_property  ip_repo_paths  {e:/aaagongcheng/Camera_Demo/IP_Core e:PLD/shuqi/SEA/Examples/FPGA-IP/Frequency-Divider-IP e:PLD/shuqi/SEA/Examples/FPGA-IP/LED-IP {E:/Users ip}} [current_project]
+update_ip_catalog
+report_ip_status -name ip_status 
+upgrade_ip -srcset AXIS_Data_RAM [get_ips  {AXIS_Data_RAM RAM_Line clk_wiz_0 clk_wiz_1}] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips {AXIS_Data_RAM RAM_Line clk_wiz_0 clk_wiz_1}] -no_script -sync -force -quiet
+update_compile_order -fileset sources_1
+reset_run csi_to_axis_0_synth_1
+reset_run RGB_LED_Task_0_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {E:/aaagongcheng/Camera_Demo/Camera_Demo.runs/impl_1/Camera_Demo.bit} [get_hw_devices xc7s15_0]
+current_hw_device [get_hw_devices xc7s15_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7s15_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7s15_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s15_0]
+set_property PROGRAM.FILE {E:/aaagongcheng/Camera_Demo/Camera_Demo.runs/impl_1/Camera_Demo.bit} [get_hw_devices xc7s15_0]
+program_hw_devices [get_hw_devices xc7s15_0]
+refresh_hw_device [lindex [get_hw_devices xc7s15_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7s15_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s15_0]
+set_property PROGRAM.FILE {E:/aaagongcheng/Camera_Demo/Camera_Demo.runs/impl_1/Camera_Demo.bit} [get_hw_devices xc7s15_0]
+program_hw_devices [get_hw_devices xc7s15_0]
+refresh_hw_device [lindex [get_hw_devices xc7s15_0] 0]
+close_hw
